@@ -21,6 +21,14 @@ export function SellDeviceForm() {
     askingPrice: ''
   })
 
+  const handleTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }))
+  }
+
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({
@@ -28,7 +36,7 @@ export function SellDeviceForm() {
       [name]: value
     }))
   }
- 
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
@@ -54,7 +62,7 @@ export function SellDeviceForm() {
 
       return;
     }
-    
+
     const result = await axios({
       method: "post",
       data: formData,
@@ -82,7 +90,7 @@ export function SellDeviceForm() {
     return;
   }
 
-  
+
 
   return (
     <motion.form
@@ -159,7 +167,7 @@ export function SellDeviceForm() {
           id="description"
           name="description"
           value={formData.description}
-          onChange={handleInputChange}
+          onChange={handleTextChange}
           required
         />
       </div>
