@@ -1,8 +1,8 @@
 "use client"
 
-import { ChangeEvent, useEffect, useState } from "react"
+import { ChangeEvent, FormEvent, useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -24,16 +24,31 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 }
 
+type DeviceType = {
+  _id: string
+  deviceName: string
+  images: StaticImageData[]
+  description: string
+  name: string
+  deviceType: string
+  dailyRate: string
+  location: string
+  availableFrom: string
+  availableTo: string
+  termsAgreed: boolean
+  deviceImages: string[]
+}
+
 export function RentDeviceForm() {
 
-  const [devices, setDevices] = useState([]);
+  const [devices, setDevices] = useState<DeviceType[]>([]);
 
   useEffect(() => {
     const fetchDevices = async() => {
       const ds = await axios.get("https://ecogadget.onrender.com/rent/devices");
 
       const result = ds.data;
-      result.devices.forEach((device) => {
+      result.devices.forEach((device: DeviceType) => {
         device.images = [images[Math.floor(Math.random() * images.length)]];
         setDevices((prevData) => [...prevData, device]);
       });
@@ -57,7 +72,7 @@ export function RentDeviceForm() {
     }))
   }
 
-  const handleSearch = (e) => {
+  const handleSearch = (e: FormEvent) => {
     e.preventDefault()
   }
 
