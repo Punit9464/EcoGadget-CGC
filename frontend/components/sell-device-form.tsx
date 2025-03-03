@@ -137,8 +137,6 @@ export function SellDeviceForm() {
       <div className="space-y-2">
         <Label htmlFor="condition">Condition</Label>
         <Select
-          id="condition"
-          name="condition"
           value={formData.condition}
           onValueChange={(value) => setFormData(prevState => ({ ...prevState, condition: value }))}
         >
