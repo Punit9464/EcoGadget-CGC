@@ -29,14 +29,13 @@ export function NavBar() {
   const [showAuthOptions, setShowAuthOptions] = useState(false);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-
-      if(!dropdownRef || !dropdownRef.current) {
+    function handleClickOutside(event: globalThis.MouseEvent) {
+      if (!dropdownRef || !dropdownRef.current) {
         return;
       }
       if (
-        dropdownRef.current && 
-        event.target instanceof Node && 
+        dropdownRef.current &&
+        event.target instanceof Node &&
         !dropdownRef.current.contains(event.target)
       ) {
         setShowAuthOptions(false);
