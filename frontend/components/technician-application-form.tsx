@@ -122,8 +122,6 @@ export function TechnicianApplicationForm() {
       <div className="space-y-2">
         <Label htmlFor="specialties">Specialties</Label>
         <Select
-          id="specialties"
-          name="specialties"
           value={formData.specialties}
           onValueChange={(value) => setFormData(prevState => ({ ...prevState, specialties: value }))}
         >
@@ -143,8 +141,6 @@ export function TechnicianApplicationForm() {
       <div className="space-y-2">
         <Label htmlFor="availability">Availability</Label>
         <Select
-          id="availability"
-          name="availability"
           value={formData.availability}
           onValueChange={(value) => setFormData(prevState => ({ ...prevState, availability: value }))}
         >
