@@ -30,6 +30,12 @@ export function RepairForm() {
     address: ''
   });
 
+  const handleTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData((prevData) => {
+      return { ...prevData, [e.target.name]: e.target.value }
+    });
+  }
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData((prevData) => {
       return { ...prevData, [e.target.name]: e.target.value }
@@ -111,7 +117,7 @@ export function RepairForm() {
                     <Textarea
                       name="issue"
                       value={formData.issue}
-                      onChange={handleChange}
+                      onChange={handleTextChange}
                       id="issue"
                       placeholder="Please describe the problem with your device"
                       className="min-h-[100px]"
@@ -159,7 +165,7 @@ export function RepairForm() {
                       className="min-h-[80px]"
                       value={formData.address}
                       name="address"
-                      onChange={handleChange}
+                      onChange={handleTextChange}
                     />
                   </div>
                 </div>
