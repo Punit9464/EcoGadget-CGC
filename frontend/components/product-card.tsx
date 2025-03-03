@@ -15,7 +15,7 @@ interface ProductCardProps {
   price: number
   rating: number
   condition: string
-  warranty: string
+  warranty: number
 }
 
 export function ProductCard({
