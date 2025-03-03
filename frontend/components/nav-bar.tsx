@@ -73,7 +73,7 @@ export function NavBar() {
     });
 
     {
-      window.location.href = "https://ecogadget.onrender.com/";
+      window.location.href = "https://ecogadget-cgc-indol.vercel.app";
     }
   };
 

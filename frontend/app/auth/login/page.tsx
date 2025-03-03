@@ -64,9 +64,9 @@ export default function LoginPage() {
 
     setLoginData({ emailOrUsername: '', password: '' });
     if(result.success) {
-      window.location.href = "https://ecogadget.onrender.com/";
+      window.location.href = "https://ecogadget-cgc-indol.vercel.app";
     } else {
-      window.location.href = "https://ecogadget.onrender.com/auth/login";
+      window.location.href = "https://ecogadget-cgc-indol.vercel.app/auth/login";
     }
   }
 

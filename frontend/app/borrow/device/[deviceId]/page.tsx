@@ -67,7 +67,7 @@ export default function RentPage() {
       "currency": "INR",
       "name": "EcoGadget",
       "order_id": response.id,
-      "callback_url": "https://ecogadget.onrender.com/orders",
+      "callback_url": "/orders",
     };
 
     if (typeof window !== 'undefined' && 'Razorpay' in window) {
