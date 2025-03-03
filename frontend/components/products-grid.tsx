@@ -10,9 +10,9 @@ type ProductType = {
   price: number
   productName: string
   image: string
-  rating: string
+  rating: number
   condition: string
-  warranty: string
+  warranty: number
 };
 
 
