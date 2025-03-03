@@ -64,7 +64,7 @@ app.use(
     cookie: {
       expires: Date.now() + 3 * 24 * 60 * 60 * 1000,
       maxAge: 3 * 24 * 60 * 60 * 1000,
-      httpOnly: true,
+      httpOnly: false,
     },
     resave: false,
     saveUninitialized: true,
@@ -129,7 +129,7 @@ app.post("/login", async (req, res) => {
   if (isSamePassword) {
     const token = jwt.sign({ id: user._id }, JWT_TOKEN, { expiresIn: "1d" });
     res.cookie("token", token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: false,
       sameSite: "lax",
       maxAge: 3 * 24 * 60 * 60 * 1000,
