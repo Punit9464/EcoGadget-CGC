@@ -64,9 +64,9 @@ export default function LoginPage() {
 
     setLoginData({ emailOrUsername: '', password: '' });
     if(result.success) {
-      window.location.href = "http://localhost:3000/";
+      window.location.href = "https://ecogadget.onrender.com/";
     } else {
-      window.location.href = "http://localhost:3000/auth/login";
+      window.location.href = "https://ecogadget.onrender.com/auth/login";
     }
   }
 

@@ -73,7 +73,7 @@ export function NavBar() {
     });
 
     {
-      window.location.href = "http://localhost:3000/";
+      window.location.href = "https://ecogadget.onrender.com/";
     }
   };
 
