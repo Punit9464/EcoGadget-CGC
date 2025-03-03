@@ -5,6 +5,16 @@ import { ProductCard } from './product-card'
 import { ChangeEvent, useEffect, useState } from 'react'
 import axios from 'axios';
 
+type ProductType = {
+  _id: string
+  price: number
+  productName: string
+  image: string
+  rating: string
+  condition: string
+  warranty: string
+};
+
 
 export function ProductsGrid() {
   const [products, setProducts] = useState([]);
@@ -56,7 +66,7 @@ export function ProductsGrid() {
           </button>
         </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-      {!loading && products.map((product, index) => (
+      {!loading && products.map((product: ProductType, index) => (
         <motion.div
           key={product._id}
           initial={{ opacity: 0, y: 20 }}
