@@ -1,0 +1,52 @@
+{
+  "name": "ecogadget_backend",
+  "version": "1.0.0",
+  "description": "backend services for the ecogadget project",
+  "keywords": [
+    "expressjs",
+    "nodejs",
+    "express",
+    "service",
+    "node",
+    "javascript",
+    "project",
+    "real-world",
+    "problem-solving"
+  ],
+  "homepage": "https://github.com/Punit9464/EcoGadget_Backend#readme",
+  "bugs": {
+    "url": "https://github.com/Punit9464/EcoGadget_Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Punit9464/EcoGadget_Backend.git"
+  },
+  "license": "ISC",
+  "author": "Punit",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.22.0",
+    "@sendgrid/mail": "^8.1.4",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "localtunnel": "^2.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "openai": "^4.86.1",
+    "razorpay": "^2.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
