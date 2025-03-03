@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, MouseEvent } from "react";
 import {
   Menu,
   User,
@@ -51,7 +51,7 @@ export function NavBar() {
 
   const user = useUser();
 
-  const handleLogoutClick = async (e: Event) => {
+  const handleLogoutClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     const result = await axios({
